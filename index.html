@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+</head>
+<body>
+
+    <input type="checkbox" name="#" id="toggle" class="toggle-btn">
+    <label for="toggle" class="toggle-label"></label>
+
+    <h1>Conversor de Real para Dólar</h1>
+    <label for="real">Valor em Real (R$):</label>
+    <input type="number" id="realInput" oninput="converter()">
+    <label for="dolar">Valor em Dólar ($):</label>
+    <input type="number" id="dolarInput" oninput="converter()">
+    
+    <script>
+    function converter() {
+    const taxaDeCambio = 5.05; 
+    const valorReal = parseFloat(document.getElementById('realInput').value);
+    const valorDolar = valorReal / taxaDeCambio;
+    document.getElementById('dolarInput').value = valorDolar.toFixed(2);
+}
+</script>
+    
+<script src="main.js"></script>
+
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHVscGFqNDdhZjQyYzY1bmQ1ZWt5OHpoZDRjaGt2ZmJlbDF5ZG1wcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xUPJPAA3ovxrz3HSik/giphy.gif" alt="">
+
+</body>
+<footer>Desenvolvido por Michele Jeske</footer>
+</html>
